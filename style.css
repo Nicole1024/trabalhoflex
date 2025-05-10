@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Pacifico&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#produtos {
+    font-family: 'Fuzzy Bubbles', sans-serif;
+}
+
+#sobre {
+    font-family: 'Fuzzy Bubbles', sans-serif;
+}
+
+h2 {
+    font-family: 'Fuzzy Bubbles', sans-serif;
+}
+
+header {
+    font-family: 'Pacifico', cursive, sans-serif;
+    color: rgb(129, 97, 9);
+}
+
+body {
+    font-family: 'Fuzzy Bubbles', sans-serif;
+}
+
+header {
+    background-color: #ffe5ec;
+    text-align: center;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    background-color: #ffc8dd;
+    position: sticky;
+    top: 60px;
+    z-index: 9;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 16px 0;
+}
+
+nav a {
+    color: #694b13;
+    font-weight: bold;
+}
+
+main {
+    padding: 32px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 32px 0;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.produto h3 {
+    text-align: center;
+}
+
+.produto {
+    max-width: 250px;
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.sobre img {
+    max-width: 95%;
+    align-self: center;
+    border-radius: 10px;
+    
+}
+
+footer {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 16px;
+    font-size: 14.4px;
+}
+
