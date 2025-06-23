@@ -104,6 +104,84 @@ section {
     
 }
 
+
+section h3 {
+    font-family: 'fuzzy bubbles', sans-serif;
+}
+
+section form {
+    font-family: 'Fuzzy Bubbles', sans-serif;
+    background-color: #f3bfd3;
+    padding: 10px;
+    gap: 20px;
+    border-color: #f297ba;
+}
+
+    section input {
+    border: 2px solid #f297ba;
+    background-color: #f7d8e4;
+    outline: none;
+}
+
+section input,
+section label,
+section textarea,
+section select {
+width: 100%;
+max-width: 100%;
+box-sizing: border-box;
+}
+
+.formgrid
+{
+    display: grid;
+    border-color: #f297ba;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+.formgrid img {
+    max-width: 100%;
+    height: auto;
+}
+
+.formgrid div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@media (max-width: 768px) {
+    .formgrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.painel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+    "foto1 foto2 foto3"
+    "foto1 foto4 foto5"
+    "foto6 foto4 foto5";
+    gap: 10px;
+}
+
+.foto1 {
+    background-image: url(img/painel/capivaraCoelhinho.webp);
+}
+
+.foto {
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+}
+
+
+
+
+
 footer {
     text-align: center;
     background-color: #f8f8f8;
