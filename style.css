@@ -3,10 +3,30 @@
 
 
 * {
-    margin: 0;
+    margin-top: 0px;
     padding: 0;
     box-sizing: border-box;
 }
+
+@keyframes surgirScroll {
+    from {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+section:not(#produtos) {
+    animation: surgirScroll linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+
 
 #produtos {
     font-family: 'Fuzzy Bubbles', sans-serif;
@@ -14,6 +34,13 @@
 
 #sobre {
     font-family: 'Fuzzy Bubbles', sans-serif;
+}
+
+#produtos h2 {
+    font-family: 'Fuzzy Bubbles', sans-serif;
+    text-align: center;
+    padding: 32px;
+    background-color: #f3bfd3;
 }
 
 h2 {
@@ -32,18 +59,23 @@ body {
 header {
     background-color: #ffe5ec;
     text-align: center;
-    padding: 16px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    padding: 20px;
 }
 
-nav {
+.navbar.fixed-top {
     background-color: #ffc8dd;
     position: sticky;
-    top: 60px;
-    z-index: 9;
+    top: 0;
+    z-index: 1030;
+    width: 100%;
 }
+
+
+
+h3 {
+    padding: 32px;
+}
+
 
 nav ul {
     list-style: none;
@@ -58,9 +90,6 @@ nav a {
     font-weight: bold;
 }
 
-main {
-    padding: 32px;
-}
 
 section {
     min-height: 100vh;
@@ -72,6 +101,7 @@ section {
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
+    margin-top: 32px;
 }
 
 .produto h3 {
@@ -97,16 +127,20 @@ section {
     text-align: center;
 }
 
+#sobreAloja {
+    text-align: center;
+}
+
 .sobre img {
     max-width: 95%;
     align-self: center;
     border-radius: 10px;
-    
-}
 
+}
 
 section h3 {
     font-family: 'fuzzy bubbles', sans-serif;
+    text-align: center;
 }
 
 section form {
@@ -117,7 +151,7 @@ section form {
     border-color: #f297ba;
 }
 
-    section input {
+section input {
     border: 2px solid #f297ba;
     background-color: #f7d8e4;
     outline: none;
@@ -127,28 +161,30 @@ section input,
 section label,
 section textarea,
 section select {
-width: 100%;
-max-width: 100%;
-box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-.formgrid
-{
+.formgrid {
     display: grid;
     border-color: #f297ba;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: center;
+    padding-right: 90px;
 }
+
 .formgrid img {
-    max-width: 100%;
-    height: auto;
+    width: 80%;
+    height: 70%;
+    padding-left: 50px;
 }
 
 .formgrid div {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 @media (max-width: 768px) {
@@ -157,29 +193,157 @@ box-sizing: border-box;
     }
 }
 
+.carousel {
+    max-width: 70%;
+    margin: 0 auto;
+    position: relative;
+    min-height: 300px;
+    padding-bottom: 35px;
+}
+
+.carousel-inner {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 300px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#car-produtos {
+    padding: 12px;
+    text-align: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-2%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+    border-radius: 80%;
+}
+
+
+
+.table-striped {
+    margin-top: 20px;
+}
+
+#painel {
+    padding: 2px;
+    text-align: center;
+}
+
+h2 {
+    padding: 32px
+}
+
 .painel-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    grid-template-areas:
-    "foto1 foto2 foto3"
-    "foto1 foto4 foto5"
-    "foto6 foto4 foto5";
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    width: 70%;
+    margin: 0 auto;
 }
 
-.foto1 {
-    background-image: url(img/painel/capivaraCoelhinho.webp);
-}
-
-.foto {
+.painel-img {
+    aspect-ratio: 1 / 1;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 6px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .painel-grid {
+        width: 95%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.quadro {
+    position: relative;
+    width: 90vw;
+    height: 30vh;
+    border: 4px solid #b48e8e;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fff0f5;
+
+}
+
+#animacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+}
+
+.novelo {
+    position: absolute;
+    width: 8vw;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: moverNovelo 5s linear infinite;
+    z-index: 1;
 }
 
 
+.gato-persegue {
+    position: absolute;
+    width: 10vw;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: moverGato 5s linear infinite;
+}
 
+.gato-persegue img {
+    width: 10vw;
+    height: auto;
+}
+
+/* Trajeto do novelo */
+@keyframes moverNovelo {
+    0% {
+        left: -10vw;
+    }
+
+    100% {
+        left: 90vw;
+    }
+}
+
+/* Trajeto do gato com atraso */
+@keyframes moverGato {
+    0% {
+        left: -20vw;
+    }
+
+    100% {
+        left: 80vw;
+    }
+}
+
+.produto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(255, 174, 200, 0.5);
+}
 
 
 footer {
@@ -189,3 +353,7 @@ footer {
     font-size: 14.4px;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+}
