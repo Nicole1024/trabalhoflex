@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Pacifico&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="img/logo1000.webp" type="image/x-icon">
     <title>Loja de Crochê</title>
 </head>
 
@@ -71,7 +72,7 @@
                     <p><strong>R$ 45,00</strong></p>
                 </div>
                 <div class="produto">
-                    <img src="./img/crochetbeachbag.webp" alt="Cesta de crochê">
+                    <img src="./img/crochetbeachbag.webp" alt="Bolsa de praia crochê">
                     <p>Bolsa de praia em crochê – ideal para passeios.</p>
                     <p><strong>R$ 80,00</strong></p>
                 </div>
@@ -233,9 +234,9 @@
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#car" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próxima</span>
                 </button>
             </div>
+        </section>
 
             <table class="table table-striped table-hover table-bordered text-center align-middle">
                 <thead class="table-dark">
@@ -288,28 +289,28 @@
             <section id="trabalhe">
                 <h3 id="trabalheconosco">Deseja trabalhar conosco? Se sim:</h3>
 
-                <form action="" class="formgrid">
+                <form action="#" class="formgrid">
 
                     <div>
                         <img srcset="img/logo300.webp 300w,
             img/logo550.webp 550w,
-            img/logo1000.webp 1000w" ; sizes="(max-width: 480px) 300px, (max-width: 960px) 550px, 1000px"
+            img/logo1000.webp 1000w" sizes="(max-width: 480px) 300px, (max-width: 960px) 550px, 1000px"
                             src="img/logo.webp" alt="gatinho preto com novelo." loading="lazy"
                             style="max-width: 100%; height: auto;">
                     </div>
 
                     <div>
-                        <label for="">Nome:</label> <input type="text" name="nome">
-                        <label for="">Senha:</label> <input type="password" name="senha">
+                        <label for="nome">Nome:</label> <input type="text" id="nome" name="nome">
+                        <label for="senha">Senha:</label> <input type="password" id="senha" name="senha">
                         <input type="hidden" name="user" value="14">
-                        <label for="">Currículo:</label>
-                        <input type="file" multiple name="arq">
+                        <label for="curriculo">Currículo:</label>
+                        <input type="file" id="curriculo" name="arq">
                         <div>
                             Prefere trabalhar conosco:
                         </div>
-                        <label for="">Presencialmente</label><input type="radio" name="trab" value="pre"><br>
-                        <label for=""></label>Virtualmente<input type="radio" name="trab" value="vir"><br>
-                        Email: <input type="email"> <br>
+                        <label for="presencial">Presencialmente</label><input type="radio" id="presencial" name="trab" value="pre"><br>
+                        <label for="virtual">Virtualmente</label><input type="radio" id="virtual" name="trab" value="vir"><br>
+                        Email: <input type="email" id="email" name="email"> <br>
                         <input type="submit" name="enviar" value="Enviar"><br>
                     </div>
                 </form>
