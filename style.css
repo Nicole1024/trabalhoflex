@@ -355,6 +355,11 @@ footer {
     color: #000;
 }
 
+footer a {
+    color: #000;
+    text-decoration: underline;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 200px;
